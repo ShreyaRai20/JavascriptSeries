@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript </li>
+    </ul>
+</body>
+<script>
+    const language = (langName) => { // traverse whole tree => not optimized
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li)
+    }
+    language("python")
+
+    const addOptLang = (langName) => { // create li and inject
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    language("python")
+
+
+    const languages = [ "JavaScript", "Python", "Java", "C++", "C#", "Go", "Ruby", "PHP", "TypeScript", "R" ];
+    
+    languages.forEach(language) // traverse whole tree => not optimized
+
+    languages.forEach(addOptLang) // create li and inject
+
+
+    // Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+    // secondLang.innerText = "Shreya"
+    const newli = document.createElement("li")
+    console.log(newli)
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    // remove
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>

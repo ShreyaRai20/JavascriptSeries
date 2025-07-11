@@ -1,0 +1,79 @@
+<!DOCTYPE html>  <!-- doc type -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color:black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading"> DOM => Document Object Model <span style="display: none;"> test span</span></h1>
+        <h1  class="heading"> DOM => Document Object Model <span style="display: none;"> test span</span></h1>
+        <h1 class="heading"> DOM => Document Object Model <span style="display: none;"> test span</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input id="password" name="password" type="password"  placeholder="password">
+        <!-- <p>window => document => html => 1. head 2. body</p>
+        <p> head =>  1. meta 2. title => text node</p>
+        <p> body =>  div</p>
+        <p> div =>  </p> -->
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+<!-- const title = document.getElementById("title")
+undefined
+title.inn
+undefined
+title.innerHTML => returns content + html tags present inside 
+' DOM =&gt; Document Object Model <span style="display: none;"> test span</span>'
+title.innerText => returns content
+'DOM => Document Object Model'
+title.textContent => returns all content i.e. hidden elements as well hidden by style
+' DOM => Document Object Model  test span' -->
+
+
+
+<!-- document.querySelector("input[type=password]") -->
+
+
+
+<!-- 
+
+const myUl= document.querySelector("ul")
+myUl.querySelector("li")
+const myli = myUl.querySelector("li")
+myli.style.backgroundColor = "green"
+-->
+
+
+<!-- 
+const tempLiList = document.querySelectorAll("li") => returns nodelist not an array but similar to array
+tempLiList.style.color = 'green'
+tempLiList[1].style.color = 'green'
+
+
+
+const myH1 = document.querySelectorAll("h1")
+myH1.forEach((l)=> {console.log(l.style.backgroundColor = "pink")})
+
+-->
+
+
+<!-- 
+document.getElementsByClassName("list-item") => returns HTMLCollection
+
+-->
