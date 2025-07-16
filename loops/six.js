@@ -30,3 +30,15 @@ const nums4 = myNums
 
 console.log(myNums)
 console.log(nums4)
+
+nums01 = [10,1,2,11,3,4,5,6,7,8,9]
+
+const numsy = nums01.filter((num)=>{return num%2===0})
+
+console.log(numsy)
+
+const numsy1 = nums01.filter((num)=>num%2===0)
+
+console.log(numsy1)
+
+console.log(nums01.reduce((acc,curr)=>Math.max(acc,curr)))
