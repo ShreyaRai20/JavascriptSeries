@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    // setTimeout(()=>{
+    //     console.log("Hello World!")
+    // },2000)
+    // // handler = callback fn
+
+    // const sayHello = () => {
+    //     console.log("Hello World!")
+    // }
+
+    // const changeText = () => {
+    //     document.querySelector("h1").innerHTML = "Hello User Set Timeout happened"
+    // }
+
+    // const changeMe = setTimeout(changeText,2000)
+
+    // document.querySelector("#stop").addEventListener("click", ()=> {
+    //     clearTimeout(changeMe)
+    //     console.log("Stopped")
+    // })
+    // // clearTimeout()
+
+    // setInterval(sayHello,2000)
+
+    const printMe = () => {
+        console.log("hello Everyone")
+    }
+
+    // setTimeout(()=>{
+    //     console.log("hello Everyone from timeout!")
+    // }, 3000)
+
+    // setInterval(()=>{
+    //     console.log("hello Everyone from Interval!")
+    // }, 3000)
+
+    // setTimeout(printMe, 2000)
+    // setInterval(printMe,3000)
+
+    // const clearMe = setTimeout(printMe, 2000)
+    const clearMe = setInterval(printMe, 2000)
+
+    // clearTimeout(clearMe)
+
+    // document.querySelector("#stop").addEventListener("click",()=>{
+    //     clearTimeout(clearMe)
+    //     console.log("stopped")
+    // })
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearInterval(clearMe)
+        console.log("stopped")
+    })
+
+
+</script>
+</html>

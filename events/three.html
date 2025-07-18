@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <button id = "start">Start</button>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    let thisInterval;
+    const callMe = () =>{
+        console.log("clicked start")
+    }
+
+    document.querySelector("#start").addEventListener("click", ()=>{
+        thisInterval = setInterval(callMe, 2000)
+    })
+
+    document.querySelector("#stop").addEventListener("click", ()=>{
+        clearInterval(thisInterval)
+        console.log("stopped")
+        console.log(thisInterval)
+
+    })
+
+</script>
+</html>
