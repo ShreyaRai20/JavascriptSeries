@@ -1,0 +1,81 @@
+<!-- Closure and Lexical Scoping -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: black;">
+    <button id= "orange"style="background-color: orange;">Button</button>
+    <button id="green" style="background-color: green;">Button</button>
+
+</body>
+<script>
+    // function init(){
+    //     let name = " Morilla"
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     displayName()
+    // }
+    // init()
+
+    // function outer(){
+    //     let name = "hello"
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     displayName()
+    // }
+    // outer()
+
+    // closure -> inner function return from outer fn
+    // in below scenario where you are returning the inner fn,the lexical scope of the function/ the whole thing from outer fn gets returned, that memory and context gets returned 
+    function OuterFn(){
+        let name = "SH"
+        function innerFn(){
+            console.log(name);
+        }
+        return innerFn
+    }
+
+    const myFn = OuterFn()
+    myFn()
+
+
+</script>
+<script>
+    // document.querySelector("#orange").onclick = function(){
+    //     document.querySelector("body").style.backgroundColor = "orange"
+    // }
+
+    // document.querySelector("#green").onclick = function(){
+    //     document.querySelector("body").style.backgroundColor = "green"
+    // }
+
+    // event listener
+    // document.querySelector("#orange").addEventListener("click",()=>{
+    //     document.querySelector("body").style.backgroundColor = "orange"
+    // })
+
+    // document.querySelector("#green").addEventListener("click",()=>{
+    //     document.querySelector("body").style.backgroundColor = "green"
+    // })
+
+
+    function clickHandler(color){
+        // document.querySelector("body").style.backgroundColor = `${color}`
+
+        function inner(){
+            document.querySelector("body").style.backgroundColor = `${color}`
+        }
+        return inner
+    }
+
+    document.querySelector("#orange").onclick = clickHandler("orange")
+    document.querySelector("#green").onclick = clickHandler("green")
+
+</script>
+</html>
