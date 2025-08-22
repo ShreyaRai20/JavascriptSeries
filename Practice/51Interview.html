@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">stop interval</button>
+</body>
+<script>
+    const button = document.querySelector("#button")
+
+    let hex = "1234567890ABCDEF"
+    function changeColor(){
+        let color = "#"
+        for(let i = 0; i<6;i++){
+            color += hex[Math.floor(Math.random()*16)]
+        }
+        return color
+    }
+    const colorChange = setInterval(()=>{
+        document.querySelector("body").style.backgroundColor = changeColor()
+        console.log(changeColor())
+    },1000)
+
+    button.onclick = ()=>{
+        clearInterval(colorChange)
+        console.log("interval cleared")
+    }
+</script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .moving-text {
+      position: absolute;
+      left: 0;
+      top: 50px;
+      animation: moveRight 5s linear infinite;
+    }
+
+    @keyframes moveRight {
+      from { left: 0; }
+      to { left: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="moving-text">🚀 Moving Right!</div>
+
+</body>
+</html>

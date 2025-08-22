@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+
+#block{
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    outline: 20px white;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    /* display: none;  */ 
+    /* visibility: hidden; */
+}
+
+.el{
+    margin: 10px;
+    background-color: pink;
+    height: 200px;
+    width: 200px;
+    border: 20px bold white;
+    /* display: INLINE; */
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+    /* display: hidden; */
+}
